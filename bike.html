@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>super Bike Showroom</title>
+    <link rel="stylesheet" href="bike.css">
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#available bikes">About</a>
+        <a href="#bike specs">Specifications</a>
+        <a href="#videos">Videos</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="home">
+        <h1>Welcome to SuperBikes Showroom</h1>
+        <p>Find your Dream Bike us!</p>
+    </section>
+    <div>
+             <h2>Bike collections</h2>
+            <div class="bike">
+            <img src="hayabusa.avif" alt="Bike 1">
+            <h3>Hayabusa x</h3>
+            <p>RS. 25,00,000</p>
+            <button onclick="addToCart('v4s')">Add to Cart</button>
+               </div>
+             <div class="bike">
+                 <img src="V4x.webp" alt="Bike 2">
+                 <h3>V4x</h3>
+                 <p>RS. 27,00,000</p>
+                  <button onclick="addToCart('V4x')">Add to Cart</button>
+                </div>
+             <div class="bike">
+                 <img src="XZX10r.jpeg" alt="Bike 3">
+                 <h3>XZX10r</h3>
+                 <p>RS. 80,00,000</p>
+                  <button onclick="addToCart('XZX10r')">Add to Cart</button>
+                 </div>
+             <div class="bike">
+                 <img src="GT 650.jpeg" alt="Bike 4">
+                 <h3>GT 650</h3>
+                 <p>RS. 45,00,000</p>
+                  <button onclick="addToCart('GT 650')">Add to Cart</button>
+                 </div>
+             <div class="bike">
+                 <img src="BMWs1000R.webp" alt="Bike 5">
+                 <h3>bmws1000r</h3>
+                 <p>RS,27,00,000</p>
+                  <button onclick="addToCart('bmws1000r')">Add to Cart</button>
+                 </div>
+             <div class="bike">
+                 <img src="H2.jpeg" alt="Bike 6">
+                 <h3>H2</h3>
+                 <p>Rs. 18,00,000</p>
+                  <button onclick="addToCart('H2')">Add to Cart</button>
+                 </div>
+                 <h3 id="cart-items">Cart : empty</h3>
+                </div>
+    </section>
+    <section id="available bikes">
+        <h2>Available Bikes</h2>
+        <div>
+            <input type="text" id="searchbox" placeholder="Search Bikes...."onkeyup="searchbikes()">
+        </div>
+        <div class="bikelist">
+            <div id="bike-card" data-name="Aprilia rsva">
+               <img src="aprilia rsv4.avif" alt="Bike 1">
+            <h3>Aprilia RSv4</h3>
+            <p>RS. 25,00,000</p>
+            </div>
+        <div  class="bike-card" data-name="ducati rs">
+               <img src="ducati Rs.avif" alt="Bike 2">
+                 <h3>Ducati Rss</h3>
+                 <p>RS. 27,00,000</p>  
+        </div>
+        <div  class="bike-card" data-name="ktm 390">
+             <img src="ktm 390.jpg" alt="Bike 3">
+                 <h3>KTM 390</h3>
+                 <p>RS. 80,00,000</p>
+        </div>
+        <div  class="bike-card" data-name="RS">
+            <img src="RS.avif" alt="Bike 4">
+                 <h3>Rs</h3>
+                 <p>RS. 45,00,000</p>
+        </div>
+        <div  class="bike-card" data-name="bmw">
+             <img src="bmw g10rr.avif" alt="Bike 5">
+                 <h3>BMW g10rr</h3>
+                 <p>RS,27,00,000</p>
+        </div>
+</div>
+    </section>
+    <section id="contact">
+        <h2>contact Us</h2>
+        <form action="" id="contactform">
+            <input type="text" id="name" placeholder="Enter the name">
+            <input type="email" id="email" placeholder="Enter the Email">
+            <input type="tel" id="phone" placeholder="Mobile Number">
+            <textarea type="message" id="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <div id="Thankyou">
+        <h2>Thank you</h2>
+        <p>We have received your message.our Team will contact you soon</p>
+    </div>
+</body>
+<script>
+    let cart = [];
+    function addToCart(bikeName){
+        cart.push(bikeName);
+        document.getElementById("cart-items").innerText = "Cart : " + cart.join(",");
+    }
+    function searchbikes(){
+        let filter = document.getElementById("searchbox").value.toLowerCase();
+        let bikes = document.querySelectorAll(".bike-card");
+        bikes.forEach(bike =>{
+            let name = bike.getAttribute("data-name").toLowerCase();
+            bike.style.display= name.includes(filter) ? "block" : "none";
+        })
+     }
+     document.getElementById("contactform").addEventListener("submit",function(e){
+          e.preventDefault();
+        let name= document.getElementById("name").value.trim()
+        let email=document.getElementById("email").value.trim()
+        let phone=document.getElementById("phone").value.trim()
+        let message=document.getElementById("message").value.trim()
+
+        if (name==="" || email==="" || phone==="" || message===""){
+            alert("All fields are required");
+            return;
+        }
+        if(!email.includes("@")){
+            alert("Enter a valid email");
+            return;
+        }
+        if(phone.length<10){
+            alert("Enter the valid mobile number");
+            return;
+        }
+         document.getElementById("contact").style.display="none"
+         document.getElementById("Thank you").style.display="block"
+     })
+</script> 
+</html>
