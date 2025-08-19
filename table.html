@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-Table</title>
+</head>
+<body>
+    <style>table,th,td {
+        border: solid blueviolet 1px;
+        padding:  8px;
+        text-align: center;
+    } 
+
+    </style>
+    <table style="color: skyblue;">
+   <tr>
+    <th>Teams</th>
+    <th>City</th>
+    <th>Home Ground</th>
+    <th>Debut</th>
+    <th>Owner</th>
+   </tr> 
+   <tr>
+    <td>chennai Super Kings</td>
+    <td>Chennai,Tamilnadu</td>
+    <td>M.A.Chidambaram Stadium</td>
+    <td>2008</td>
+    <td><ul><li>N.Srinivasan</li></ul></td>
+   </tr>
+   <tr> 
+    <td>Delhi Capitals</td>
+    <td>new Delhi,Delhi</td>
+    <td>Arun Jaitley Stadium</td>
+    <td></td>
+    <td><ul>
+        <li>Sajjan Jindal</li>
+        <li>G.M.Rao</li>
+   </tr>
+   <tr>
+    <td>Gujarat Titans</td>
+    <td>Ahmedabad,Gujarat</td>
+    <td>Narendra Modi Stadium</td>
+    <td>2022</td>
+    <td><ul><li>CVC Capital Partners</li></ul></td>
+   </tr>
+    <tr>
+     <td>Punjab Kings</td>
+     <td>Mohali,Punjab</td>
+     <td>Punjab Cricket Association IS Bindra Stadium</td>
+     <td>2008</td>
+     <td><ul><li>Ness Wadia</li></ul></td>
+    </tr>
+    <tr>
+     <td>Rajasthan Royals</td>
+     <td>Jaipur,Rajasthan</td>
+     <td>Sawai Mansingh Stadium</td>
+     <td>2008</td>
+        <td><ul><li>Manoj Badale</li></ul></td>
+    </tr>
+    <tr>
+     <td>Royal Challengers Bangalore</td>
+     <td>Bengaluru,Karnataka</td>
+     <td>M.Chinnaswamy Stadium</td>
+     <td>2008</td>
+     <td><ul><li>United Spirits</li></ul></td>
+    </tr>
+    <tr>
+     <td>Sunrisers Hyderabad</td>
+     <td>Hyderabad,Telangana</td>
+     <td>Rajiv Gandhi International Stadium</td>
+     <td>2013</td>
+     <td><ul><li>Kalanithi Maran</li></ul></td>
+    </tr>
+</table>
+<form action="new.html" method="get">
+    <div>
+        <label for="Username">Username</label>
+      <input type="text" name="Username" id="Username" maxlength="20">
+
+    </div>
+     <div>
+      <lable for ="Username">password</lable>
+        <input type="password" name="password" id="password" minlength="4">
+    </div>
+    <div>
+        <lable for="Captcha">Captcha</lable>
+        <input type="text" name="Captcha" id="Captcha">
+    </div>
+    <div>
+        <label for="Email">Email</label>
+        <input type="email" name="Email" id="Email" required>
+    </div>
+    <div>
+        <label for="date">Date</label>
+        <input type="data" name="date" id="date">
+    </div>
+    <div>
+        <input type="checkbox" name="Dept" id="Dept">
+        <label for ="dept">ECE</label>
+    </div>
+    <div>
+         <input type="checkbox" name="Dept" id="Dept">
+        <label for ="EEE">EEE</label>
+    </div>
+    <div>
+        <input type="radio" name="gender" id="male">
+        <label for="male">Male</label>
+    </div>
+    <div>
+         <input type="radio" name="gender" id="female">
+        <label for="female">Female</label>
+
+    </div>
+    
+    <div>
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" min="0">
+    </div>
+    <div>
+        <label for="marks">Marks</label>
+        <input type="number" name="marks" id="marks" max="100" min="0">
+    </div>
+    <div>
+        <textarea name="" id="" rows="20" cols="30">TextArea</textarea>
+    </div>
+    <buttom type="submit">Submit</buttom>
+
+</form>
+</body>
+</html>
