@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ducati Premium Bikess </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+        header{
+            background-color: #0f0f0f;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            background-image: url("ducati v4 R.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        header h1{
+            font-size: 3rem;
+            background: rgb(0,0,0,0.2);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        nav{
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            gap:20px;
+            padding: 15px;
+            
+        }
+        nav a{
+            color:#fff;
+            text-decoration:solid;
+            font-weight: bold;
+            transition: color 0.5s;
+        }
+        nav a:hover{
+            color: #047399;
+        }
+        section{
+            padding: 60px;
+        }
+        .specs{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: #f4f4f4;
+        }
+        .specs-1{
+            background: #fff;
+            border-radius: 10px;
+            box-shadow:0 6px 8px rgb(0,0,0,0.7);
+            margin: 15px;
+            padding: 20px;
+            width: 200px;
+        }
+        .specs-1:hover{
+            transform: scale(1,2);
+        }
+        .gallery{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .gallery img{
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.5;
+        }
+        .gallery img:hover{
+            transform: scale(1,2);
+        }
+        .video{
+            display: flex;
+            justify-content: center;
+        }
+        iframe{
+            width: 75%;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a herf="#">Home</a>
+        <a href="#bikes">Bikes</a>
+        <a href="#about">About</a>
+        <a href="#specs">Specs</a>
+        <a href="#contact">Contact</a>
+        <a href="#video">Video</a>
+
+    </nav>
+    <header>
+    <h1>Welcome to Ducati Premium Showroom🏍️</h1>
+    </header>
+    <section id="specs" class="specs">
+        <div class="specs-1">
+        <h3>Ducati penigale v4</h3>
+        <p>Engine: 8000cc</p>
+        <p>Horsepower: 1479hHP</p>
+        <p>Top Speed: 333 km/hr</p>
+    </div>
+    <div class="specs-1">
+        <h3>Ducati streetfighter</h3>
+        <p>Engine: 7899cc</p>
+        <p>Horsepower: 1489HP</p>
+        <p>Top Speed: 310 km/hr</p>
+    </div>
+    <div class="specs-1">
+        <h3>Ducati penigale v4 R</h3>
+        <p>Engine: 7600cc</p>
+        <p>Horsepower: 1476HP</p>
+        <p>Top Speed: 330 km/hr</p>
+
+    </div>
+        </section>
+        <section id="Bike" class="gallery">
+            <img src="v4.avif" alt="bike 1">
+            <img src="v4 r.avif" alt="bike 2">
+            <img src="street.avif"  alt="bike 3">
+            <img src="ducati Rs.avif" alt="bike 4">
+        </section>
+        <section id="Video" class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1tGzoOun09A?si=f2WjOjYi8Oer0Iei" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+</body>
+</html>
